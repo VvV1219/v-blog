@@ -36,7 +36,7 @@ jobs:
         run: pnpm install
 
       - name: Build with VitePress
-        run: pnpm run docs:build # 确保 package.json 里有这个命令
+        run: pnpm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
