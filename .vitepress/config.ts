@@ -7,7 +7,7 @@ const pageSize = 10
 const isProd = process.env.NODE_ENV === 'production'
 
 export default defineConfig({
-    title: 'Vitepress blog',
+    title: 'V blog',
     base: '/v-blog/',
     cacheDir: './node_modules/vitepress_cache',
     description: 'vitepress,blog,blog-theme',
