@@ -8,14 +8,14 @@ const isProd = process.env.NODE_ENV === 'production'
 
 export default defineConfig({
     title: 'Vitepress blog',
-    base: '/',
+    base: '/v-blog/',
     cacheDir: './node_modules/vitepress_cache',
     description: 'vitepress,blog,blog-theme',
     ignoreDeadLinks: true,
     themeConfig: {
         posts: await getPosts(pageSize),
-        website: 'https://github.com/VvV1219',
-        // 评论的仓库地址 https://giscus.app/ 请按照这个官方初始化后覆盖
+        website: 'https://github.com/VvV1219/v-blog',
+        // 评论的仓库地址 https://giscus.app/ 
         comment: {
             repo: 'VvV1219/v-blog',
             repoId: 'R_kgDORl29iw',
@@ -24,15 +24,11 @@ export default defineConfig({
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Category', link: '/pages/category' },
-            { text: 'Archives', link: '/pages/archives' },
             { text: 'Tags', link: '/pages/tags' },
-            { text: 'About', link: '/pages/about' }
-            // { text: 'Airene', link: 'http://airene.net' }  -- External link test
         ],
         search: {
             provider: 'local'
         },
-        //outline:[2,3],
         outline: {
             label: '文章摘要'
         },
