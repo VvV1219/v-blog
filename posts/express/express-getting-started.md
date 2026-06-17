@@ -87,32 +87,41 @@ app.get('/restricted', restrict, handler);  // 路由能串多个工位
 
 > 第 0 层 MVP 就这些，不需要更多 Express 知识。
 
+## 环境准备（截图 MVP 用）
+
+截图接口靠 Puppeteer 驱动浏览器，跑之前要装两样：
+
+```bash
+pnpm add puppeteer                       # 装库（当前 puppeteer 25.1.0）
+npx puppeteer browsers install chrome    # 单独下 Chromium
+```
+
+⚠️ **只装库不下浏览器，`puppeteer.launch()` 会报「找不到浏览器」**。新版默认不再自带 Chromium，得手动 `browsers install` 一次。
+
 ## 自检
 
-- [ ] `app.use` 顺序为什么重要、中间件四种来源
-- [ ] `req.body` 为什么空、怎么不空
-- [ ] `next()` vs `next(err)`
-- [ ] 门卫怎么放行/拦截
-- [ ] 路由为什么具体在前、通配在后
-- [ ] 错误中间件为什么 4 参数、放最后
-- [ ] async 错误为什么要自己 try/catch、`finally` 关浏览器
-- [ ] `express.Router()` 干嘛的
+先盖住答案，能说清再往下看。
 
-> TODO：空文件夹 `npm i express`，拼个门卫 + 错误工位的小服务，curl 看它放行/拦截/报错。**看十遍不如卡一次 bug。**
+**1. `app.use` 顺序为什么重要、中间件四种来源**
+请求从上往下穿过工位，写前面的先跑——解析、鉴权这类要放在用到它们的接口之前。来源：内置（`express.json`/`static`）、第三方（`morgan`/`cors`）、应用级（`app.use(fn)` 全局）、路由级（只挂某条路由）。
 
+**2. `req.body` 为什么空、怎么不空**
+没装解析工位时 Express 不碰 body，`req.body` 就是 `undefined`/空。收 JSON 装 `express.json()`、收表单装 `express.urlencoded()`——收什么装什么。
 
+**3. `next()` vs `next(err)`**
+`next()` 放行去下一个普通工位；`next(err)` 带参数 → 跳过所有普通工位，直奔 4 参数的错误工位。
 
+**4. 门卫怎么放行/拦截**
+条件满足调 `next()` 放行；不满足当场 `res.redirect`/`res.status().json()` 响应并结束，不调 `next`。
 
+**5. 路由为什么具体在前、通配在后**
+匹配是从上往下先到先得。`:id`、404 兜底这类通配如果放前面会先吃掉请求，具体路由就再也轮不到。
 
+**6. 错误中间件为什么 4 参数、放最后**
+Express 靠参数个数（`(err, req, res, next)` 四个）认出它是错误工位；放最后才能兜住前面所有工位 `next(err)` 抛过来的错。
 
+**7. async 错误为什么要自己 try/catch、`finally` 关浏览器**
+Express 4 接不住 `async` 函数里 reject 的 Promise，不 `try/catch` 就直接挂、请求卡死。浏览器等资源无论成败都得释放，所以放 `finally`。
 
-
-
-
-
-
-
-自己补充的：
-环境）：
-✅ pnpm add puppeteer —— 装上了 puppeteer 25.1.0
-✅ npx puppeteer browsers install chrome —— 下好了 Chromium（不然 launch 时会报找不到浏览器）
+**8. `express.Router()` 干嘛的**
+一个「小号 app」，按业务把路由拆到独立文件（`router.get(...)` + `module.exports = router`），主文件 `app.use('/users', router)` 挂回去并统一加前缀。
