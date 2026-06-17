@@ -1,17 +1,19 @@
 {
   "name": "v-blog",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
+  "description": "基于 VitePress 的个人博客",
   "scripts": {
     "dev": "vitepress dev --host 0.0.0.0",
     "build": "vitepress build",
     "preview": "vitepress preview"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "vitepress",
+    "blog"
+  ],
+  "author": "VvV1219",
   "type": "module",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "vitepress": "^1.6.4",
     "globby": "^15.0.0",

@@ -1,0 +1,19 @@
+# 依赖
+node_modules/
+
+# 构建产物
+.vitepress/dist/
+.vitepress/cache/
+.vitepress/.temp/
+
+# 自动生成的分页文件（serverUtils.ts 构建时生成）
+index.md
+page_*.md
+
+# 日志与系统文件
+*.log
+.DS_Store
+
+# 编辑器
+.vscode/
+.idea/
