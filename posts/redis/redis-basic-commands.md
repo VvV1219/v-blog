@@ -2,10 +2,11 @@
 title: Redis 基础命令学习笔记
 description: Redis 基础命令学习笔记
 date: 2026-07-16 00:00
-category: 数据库
+category: 学习笔记
 tags:
   - Redis
   - 数据库
+  - 学习笔记
 aside: true
 comment: true
 ---
