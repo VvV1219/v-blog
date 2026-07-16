@@ -38,6 +38,7 @@ export default defineConfig({
             { text: 'Home', link: '/' },
             { text: 'Category', link: '/pages/category' },
             { text: 'Tags', link: '/pages/tags' },
+            { text: 'Redis', link: '/pages/redis-basic-commands' },
         ],
         search: {
             provider: 'local'
