@@ -15,8 +15,6 @@ comment: false
 
 相关笔记：[基础知识](../backend/basic-knowledge-notes.md) · [MySQL](../mysql/mysql-learning-notes.md) · [Go](go-learning-notes.md)
 
-[返回笔记导航](../go/go-backend-basics.md)
-
 ## 复习导航
 
 | 我想复习什么？ | 去哪里看？ | 所属模块 |
