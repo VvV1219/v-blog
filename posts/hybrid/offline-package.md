@@ -115,9 +115,3 @@ Service Worker 的注册、激活和缓存更新有自己的生命周期，不�
 | 新包接口不兼容 | 回退资源后，业务是否仍然正常？ |
 
 自检：为何需要临时目录和原子切换？为什么下载成功不能作为离线优化的唯一指标？如果只回源一个缺失 JS，怎样保证版本一致？
-
-## 参考资料
-
-- [Niuhk：H5 离线包方案](https://niuhk.cn/2023/09/05/H5离线包方案/)
-- [Android WebView 本地内容加载](https://developer.android.com/develop/ui/views/layout/webapps/load-local-content)
-- [MDN：Service Worker 生命周期与缓存](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)

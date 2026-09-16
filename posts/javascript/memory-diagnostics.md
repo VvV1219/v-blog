@@ -130,9 +130,3 @@ Node 堆快照会暂停主线程，并可能额外占用大量内存。应在有
 - **加大堆就解决 OOM？**可能只是延后失败，也可能挤压其他进程。
 
 自检：海报生成后 `heapUsed` 下降而机器内存仍高，你会检查哪些资源？缓存没有上限和真正无法释放的泄漏，有什么共同风险、又有什么不同？
-
-## 参考资料
-
-- [Niuhk：V8 垃圾回收与内存管理](https://niuhk.cn/2021/06/10/V8中的垃圾回收器与内存管理/)
-- [V8 Orinoco](https://v8.dev/blog/trash-talk) · [Node.js 内存指标](https://nodejs.org/api/process.html#processmemoryusage)
-- [Chrome 内存诊断](https://developer.chrome.com/docs/devtools/memory-problems) · [Node 堆快照](https://nodejs.org/learn/diagnostics/memory/using-heap-snapshot)

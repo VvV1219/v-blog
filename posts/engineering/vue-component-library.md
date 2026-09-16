@@ -192,9 +192,3 @@ npm pack --dry-run
 - **单测通过就不需要消费验证？**单测可能绕过真正的安装路径。
 
 自检：为什么要把 Vue 外置？如何证明用户能从安装包获得类型？如果按钮的 `loading` 行为改变，哪些文档和测试需要同步？
-
-## 参考资料
-
-- [Niuhk：从 0 构建前端 UI 组件库](https://niuhk.cn/2023/01/06/从0构建前端UI组件库/)
-- [PNPM 工作区](https://pnpm.io/workspaces) · [Vite 库模式](https://vite.dev/guide/build.html#library-mode)
-- [Vue 与 TypeScript](https://vuejs.org/guide/typescript/overview.html) · [Node.js 包入口](https://nodejs.org/api/packages.html#conditional-exports)

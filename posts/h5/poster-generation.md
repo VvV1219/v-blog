@@ -140,9 +140,3 @@ W × H × S² × 4 字节
 | 图片生成了但分享失败 | 分享接口接受的格式、大小限制和客户端版本 |
 
 复习时尝试回答：为什么 `nextTick()` 不够？为什么切成多段再拼接仍可能失败？为什么本地生成和服务端截图应该共用数据模型，但不必共用全部执行逻辑？
-
-## 参考资料
-
-- [Niuhk：H5 本地生成图片分享方案](https://niuhk.cn/2024/07/26/H5本地生成图片分享方案/)
-- [html2canvas FAQ](https://html2canvas.hertzen.com/faq) · [配置选项](https://html2canvas.hertzen.com/configuration)
-- [MDN：Canvas 跨域图片](https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/CORS_enabled_image)

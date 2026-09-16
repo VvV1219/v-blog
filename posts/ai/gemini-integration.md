@@ -159,11 +159,3 @@ func main() {
 遇到限流或可恢复错误，可采用带随机抖动的有限重试，同时限制总时间和次数。错误的密钥、格式或模型名称不应盲目重试。每次重试都可能再次产生费用。
 
 比较 Node.js 与 Go 时，保持模型、输入、地域和并发一致。单次请求的快慢通常不足以证明语言导致差异。
-
-## 参考资料
-
-- [Google：Gen AI SDK](https://ai.google.dev/gemini-api/docs/libraries)
-- [Google：当前音频接口指南](https://ai.google.dev/gemini-api/docs/audio)
-- [Google：Generate Content 音频指南](https://ai.google.dev/gemini-api/docs/generate-content/audio)
-- [Google：结构化输出](https://ai.google.dev/gemini-api/docs/structured-output)
-- [JavaScript SDK](https://github.com/googleapis/js-genai) · [Go SDK](https://github.com/googleapis/go-genai)

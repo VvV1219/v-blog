@@ -119,9 +119,3 @@ onLCP(recordMetric)
 - **只测桌面浏览器**：App WebView、字体缩放和设备资源都可能改变表现。
 
 自检：如果主图加载很快但 LCP 仍慢，你会检查哪个时间段？如果本地分数提高但线上 p75 没变，你会如何检查样本与测试条件？
-
-## 参考资料
-
-- [Niuhk：性能诊断和优化手段](https://niuhk.cn/2022/07/22/前端性能优化%28三%29-性能诊断和优化手段/)
-- [Web Vitals](https://web.dev/articles/vitals) · [web-vitals 采集库](https://github.com/GoogleChrome/web-vitals)
-- [Chrome DevTools Performance](https://developer.chrome.com/docs/devtools/performance)

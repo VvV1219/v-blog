@@ -149,9 +149,3 @@ function dispose() {
 - 只隐藏容器不销毁实例：页面切换后仍可能继续占用资源。
 
 自检：为何文字已替换却仍显示乱码？何时应该放弃动画内文字，改用 HTML？如何证明切换十次语言后只剩一个有效实例？
-
-## 参考资料
-
-- [Niuhk：Animal MBTI 活动经验](https://niuhk.cn/2024/08/02/「Animal%20MBTI%20测试活动」经验分享/)
-- [lottie-web](https://github.com/airbnb/lottie-web) · [文本更新约束](https://github.com/airbnb/lottie-web/wiki/TextLayer.updateDocumentData)
-- [MDN：字体加载 API](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API)
