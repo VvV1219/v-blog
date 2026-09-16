@@ -14,8 +14,6 @@ comment: false
 
 # H5 海报生成：html2canvas 与 Puppeteer 选型笔记
 
-> 本文参考 Niuhk 的 [H5 本地生成图片分享方案](https://niuhk.cn/2024/07/26/H5本地生成图片分享方案/)，重新整理为选型和排查笔记。示例使用通用场景，不包含原业务接口；没有把原作者的设备测试结果当成本地实测。
-
 相关笔记：[Puppeteer 截图服务](../puppeteer/puppeteer-screenshot-service.md) · [Lottie 多语言](../animation/lottie-i18n.md) · [内存排查](../javascript/memory-diagnostics.md)
 
 ## 1. 核心认识：生成一张图，是一条资源处理链

@@ -15,8 +15,6 @@ comment: false
 
 # Lottie 多语言动画：文本、字体与交互笔记
 
-> 参考 Niuhk 的[「Animal MBTI 测试活动」经验分享](https://niuhk.cn/2024/08/02/「Animal%20MBTI%20测试活动」经验分享/)，整理通用的设计协作和实现思路。本文没有复用原活动的动画、字体或业务资源。
-
 相关笔记：[H5 海报生成](../h5/poster-generation.md) · [Vue 组件库](../engineering/vue-component-library.md)
 
 ## 1. 核心认识：动画文件也需要稳定接口

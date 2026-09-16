@@ -13,8 +13,6 @@ comment: false
 
 # Canvas 不规则区域命中检测笔记
 
-> 参考 Niuhk 的 [基于 canvas getImageData 函数的图片碰撞检测](https://niuhk.cn/2025/01/21/基于canvas%20getImageData函数的图片碰撞检测/)，用独立示例整理坐标转换、透明度判断和交互边界。
-
 相关笔记：[H5 海报生成](../h5/poster-generation.md) · [H5 性能优化](../performance/h5-performance.md)
 
 ## 1. 先定义“碰到”的含义

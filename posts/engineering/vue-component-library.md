@@ -15,8 +15,6 @@ comment: false
 
 # Vue 组件库工程化：开发、打包与发布笔记
 
-> 参考 Niuhk 公开文章[从 0 构建前端 UI 组件库](https://niuhk.cn/2023/01/06/从0构建前端UI组件库/)，按“消费方能否正确安装和使用”重新组织。下文 `@example/ui` 和组件代码均为独立教学示例，不引用公司私有仓库源码或内部发布配置。
-
 相关笔记：[Lottie 多语言](../animation/lottie-i18n.md) · [H5 性能优化](../performance/h5-performance.md)
 
 ## 1. 核心认识：组件库交付的是约定和产物
@@ -118,7 +116,7 @@ packages:
 | CSS | 消费方获得预期样式 | 产物未导出，或被错误地当成无副作用文件删除 |
 | `.d.ts` | 编辑器提示与类型检查 | 路径不对、声明引用了未发布的源码 |
 
-原文使用 Rollup 与 Gulp 组织打包。也可以使用 Vite library mode；选择工具时要看输出格式、入口数量和团队维护成本，不必为“有组件库”引入所有工具。
+可以使用 Rollup 与 Gulp 组织打包，也可以使用 Vite library mode；选择工具时要看输出格式、入口数量和团队维护成本，不必为“有组件库”引入所有工具。
 
 若使用 Vite，要显式外置 Vue，并按所用主版本配置对应构建选项。不同版本可能使用 `rollupOptions` 或 `rolldownOptions`，不要把旧配置直接套进新版本。[Vite library mode](https://vite.dev/guide/build.html#library-mode)
 

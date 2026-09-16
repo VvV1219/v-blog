@@ -15,8 +15,6 @@ comment: false
 
 # WebView 离线包：更新、校验、灰度与回退笔记
 
-> 参考 Niuhk 的 [H5 离线包方案](https://niuhk.cn/2023/09/05/H5离线包方案/)，补充状态转换和异常场景。下文是通用架构设计笔记，不是某个客户端已实现的接口规范。
-
 相关笔记：[H5 性能优化](../performance/h5-performance.md) · [HTTP 缓存](../http/http.md)
 
 ## 1. 核心认识：资源可离线，业务不一定可离线

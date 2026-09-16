@@ -15,8 +15,6 @@ comment: false
 
 # V8、Node.js 与浏览器内存排查笔记
 
-> 选题参考 Niuhk 的 [V8 中的垃圾回收器与内存管理](https://niuhk.cn/2021/06/10/V8中的垃圾回收器与内存管理/)。本文保留分代回收这一学习入口，重点补充排查方法，不沿用旧文章里的固定堆大小和固定 GC 耗时。
-
 相关笔记：[Puppeteer 截图服务](../puppeteer/puppeteer-screenshot-service.md) · [H5 性能优化](../performance/h5-performance.md) · [海报生成](../h5/poster-generation.md)
 
 ## 1. 核心认识：没有业务用途，不等于可以回收

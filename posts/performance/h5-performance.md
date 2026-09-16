@@ -14,8 +14,6 @@ comment: false
 
 # H5 性能优化：指标、诊断与验证笔记
 
-> 选题参考 Niuhk 的[性能诊断和优化手段](https://niuhk.cn/2022/07/22/前端性能优化%28三%29-性能诊断和优化手段/)。本文以一个假设的活动页为例整理排查步骤，指标口径参考官方文档；文中的优化路径不是线上实测结果。
-
 相关笔记：[HTTP](../http/http.md) · [WebView 离线包](../hybrid/offline-package.md) · [内存排查](../javascript/memory-diagnostics.md)
 
 ## 1. 核心认识：先把“慢”翻译成可测的问题

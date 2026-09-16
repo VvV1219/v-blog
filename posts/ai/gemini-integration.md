@@ -14,8 +14,6 @@ comment: false
 
 # Node.js 与 Go 接入 Gemini 多模态模型笔记
 
-> 参考 Niuhk 的 [谷歌 gemini 大模型接入记录](https://niuhk.cn/2025/02/13/谷歌gemini大模型接入记录/)，整理为独立的服务端接入笔记。没有沿用原文的旧实验模型，也不复用业务提示词或用户音频。
-
 相关笔记：[Go 学习笔记](../go/go-learning-notes.md) · [Express 入门](../express/express-getting-started.md)
 
 ## 1. 先确定输入和输出契约
@@ -33,7 +31,7 @@ API Key 只保存在服务端。不要放进 `VITE_` 环境变量、浏览器代
 
 Google Gen AI SDK 的包名是 Node.js 的 `@google/genai` 和 Go 的 `google.golang.org/genai`。
 
-截至本文整理时，官方文档已经将 Interactions API 作为新的文档入口，并将 Generate Content 文档标记为 Legacy。下面保留 Generate Content 的简短双语言示例，便于理解原文的请求方式；新项目应先核对当前官方接口、模型支持和迁移说明，再决定采用哪条路径。
+截至本文整理时，官方文档已经将 Interactions API 作为新的文档入口，并将 Generate Content 文档标记为 Legacy。下面保留 Generate Content 的简短双语言示例，用于演示音频输入与响应处理；新项目应先核对当前官方接口、模型支持和迁移说明，再决定采用哪条路径。
 
 通过 `GEMINI_MODEL` 配置经确认支持音频的模型，避免将旧 preview 名称写死。SDK 版本应锁定在 lockfile 或 go.mod 中，升级时重新验证。
 
