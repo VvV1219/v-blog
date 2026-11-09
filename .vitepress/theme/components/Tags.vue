@@ -15,7 +15,6 @@
             <div class="post-dot"></div>
             {{ article.frontMatter.title }}
         </div>
-        <div class="date">{{ article.frontMatter.date }}</div>
     </a>
 </template>
 <script lang="ts" setup>

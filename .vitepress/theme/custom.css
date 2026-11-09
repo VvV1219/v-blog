@@ -23,7 +23,7 @@
 /* theme reset start */
 
 .Layout {
-    min-height: calc(100vh - 78px) !important; /* reduce copyright */
+    min-height: 100vh !important;
 }
 
 .vp-doc a {
